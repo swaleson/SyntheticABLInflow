@@ -1,0 +1,3 @@
+synInflowFvPatchVectorField.C
+
+LIB = ./synInflowLib

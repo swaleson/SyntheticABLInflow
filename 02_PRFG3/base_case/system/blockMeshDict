@@ -1,0 +1,115 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include    "../setUp"
+
+convertToMeters 1.0;
+
+vertices
+(
+    //Vertices on the ground
+    ($xMin	$yMin	$zMin)
+    ($xMax 	$yMin   $zMin)
+    ($xMax 	$yMax 	$zMin)
+    ($xMin  $yMax   $zMin) 
+	
+	//Vertices on the mid plane
+    ($xMin	$yMin	$zMid)
+    ($xMax 	$yMin   $zMid)
+    ($xMax 	$yMax 	$zMid)
+    ($xMin  $yMax 	$zMid)
+
+    //Vertices on the top surface
+    ($xMin	$yMin	$zMax)
+    ($xMax 	$yMin   $zMax)
+    ($xMax 	$yMax 	$zMax)
+    ($xMin  $yMax 	$zMax)
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) ($nx $ny $nz_b) simpleGrading (1 1 4) 
+	hex (4 5 6 7 8 9 10 11) ($nx $ny $nz_t) simpleGrading (1 1 1) 
+);
+
+edges
+(
+);
+
+boundary
+(
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+			(4 8 11 7)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (2 1 5 6)
+			(6 5 9 10)
+        );
+    }
+    top
+    {
+        type symmetry;
+        faces
+        (
+            (8 9 10 11)
+			
+        );
+    }
+    ground
+    {
+        type wall;
+        faces
+        (
+            (0 1 2 3)
+        );
+    }
+
+    front
+    {
+        type symmetry;
+        faces
+        (
+			(0 1 5 4)
+			(4 5 9 8)
+        );
+    }
+
+    back
+    {
+        type symmetry;
+        faces
+        (
+			(3 2 6 7)
+			(7 6 10 11)
+        );
+    }
+);
+
+mergePatchPairs
+(
+);
+
+// ************************************************************************* //

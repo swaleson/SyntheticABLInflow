@@ -1,0 +1,14 @@
+#!/bin/bash 
+#SBATCH --account=def-gbitsuam
+#SBATCH --time=00-7:00:00
+#SBATCH --ntasks=1
+#SBATCH --mem-per-cpu=64G
+#SBATCH --mail-user=sbreitko@uwo.ca
+#SBATCH --mail-type=ALL #start, error and end
+module purge  #loescht alle Module
+module load StdEnv/2020 gcc/9.3.0 openmpi/4.0.3 fftw/3.3.8 imkl/2020.1.217 openfoam/v2112
+
+snappyHexMesh -overwrite
+checkMesh
+
+
