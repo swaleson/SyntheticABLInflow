@@ -28,7 +28,7 @@ Provided through https://site.unibo.it/cwe-lamc/en/downloads/syninflow and prese
 Provided with adjusted eddy life-time and multiple fields of which only one is used through https://github.com/MSCA-LIKE/4D-Mann-Turbulence-Generator. Guo, F., Mann, J., 2022. Initial release of the 4d mann turbulence generator: Mannturb4d (version v1.0). http://dx.doi.org/10.5281/zenodo.6223785. Original method in Mann, J., 1994. The spatial structure of neutral atmospheric surface-layer turbulence. J. Fluid Mech. 273, 141–168.
 
 **TurbSim** 
-Provided through https://www.nlr.gov/wind/nwtc/turbsim
+Provided through https://www.nlr.gov/wind/nwtc/turbsim. Beware that the NREL was renamed to NLR. 
 
 **DFSEM**
 *turbulentDFSEMInlet* for version 2012. e.g. https://doc.openfoam.com/2306/tools/processing/boundary-conditions/rtm/derived/inlet/turbulentDFSEMInlet/
