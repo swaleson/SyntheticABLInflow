@@ -17,8 +17,13 @@ If you use material from this repository, please cite the publication above.
 
 # 01. Synthetic inflow generation method sources
 The third-party synthetic inflow generation methods are only provided as links. The external material remains subject to the terms and conditions of the respective providers.
+
 | Inflow method | Reference | Availability |
+
 | DFSR |  Melaku, A.F. and Bitsuamlak, G.T., 2021. A divergence-free inflow turbulence generator using spectral representation method for large-eddy simulation of ABL flows. Journal of Wind Engineering and Industrial Aerodynamics, 212, p.104580 | https://github.com/abiyfantaye/DFSR |
+
 | PRFG³ | https://site.unibo.it/cwe-lamc/en/downloads/syninflow |
+
 | TurbSim | https://www.nlr.gov/wind/nwtc/turbsim |
+
 | Mann | https://github.com/MSCA-LIKE/4D-Mann-Turbulence-Generator | 
