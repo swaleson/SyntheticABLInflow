@@ -1,8 +1,6 @@
 # PRFG³ Manual
 
-After the .zip is downloaded and unpacked, the directories *CodeOF*, *inflowCorrection*, and *inflowGeneration* are copied into the base_case. 
-
-Preparation: Copy mesh into inflowCorrection directory. 
+Preparation: After the .zip is downloaded and unpacked, the directories *CodeOF*, *inflowCorrection*, and *inflowGeneration* are copied into the base_case. Copy mesh into inflowCorrection directory. 
 
 1. python inflowGeneration.py 
 2. python inflowCorrection.py
