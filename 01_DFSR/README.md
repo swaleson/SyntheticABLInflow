@@ -6,4 +6,4 @@ After the installation of DFSR, die **OpenFOAM v8** case is decomposed. DFSRTurb
 2. mpirun -np 8 DFSRTurb -parallel
 3. mpirun -np 8 pimpleFoam -parallel
 
-The open, suburban, and urban case can be implemented by adjusting the *profile*-file in constant>boundaryData>windProfile. 
+The open, suburban, and urban case can be implemented by adjusting the *profile*-file in constant>boundaryData>windProfile, by taking the respective file from the directory.
