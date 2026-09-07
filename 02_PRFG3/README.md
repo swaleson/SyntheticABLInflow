@@ -10,4 +10,4 @@ Copy inflowCorrectionDict and inflowGenerationDict into system directory, copy s
 4.	decomposePar
 5.	mpirun -np 8 pimpleFoam -parallel
 
-The open, suburban, and urban case can be implemented by adjusting the inflowGeneration.py and profileLib.py files in the inflowGeneration directory. 
+The open, suburban, and urban case can be implemented by adjusting the inflowGeneration.py and profileLib.py files in the inflowGeneration directory as provided in the text files. 
