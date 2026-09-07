@@ -1,0 +1,9 @@
+Profile Settings: 
+Ubas = 5.83
+scale = 400.0
+zTop = 1400.0/scale
+nZ = 51
+
+[z0,zMin,kt] = profilesLib.getECCoefficients("EC Category III")
+
+parameters['seeds'] = numpy.array([45,101,212,333,490,700,1100])/scale

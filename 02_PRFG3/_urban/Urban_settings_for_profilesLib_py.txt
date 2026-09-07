@@ -1,0 +1,4 @@
+elif category=="EC Category IV":
+        z0 = 0.7
+        zMin = 7.86
+        kt = 0.24
