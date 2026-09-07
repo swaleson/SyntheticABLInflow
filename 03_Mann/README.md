@@ -6,7 +6,8 @@ Preparation: Download the method (https://github.com/fengguoFUAS/4D-Mann-Turbule
 3.	decomposePar
 4.	mpirun -np 8 pimpleFoam -parallel
 
-*MIT License
+MIT License
+
 Copyright (c) 2022 fengguoFUAS
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
