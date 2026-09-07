@@ -1,0 +1,28 @@
+Turbine/Model Specifications: 
+NumGrid_Z: 30
+NumGrid_Y: 34
+TimeStep: 0.0616
+AnalysisTime: 4500
+UsableTime: 4400
+HubHt: 501
+GridHeight: 1000
+GridWidth: 1360
+
+Meteorological Boundary Conditions: 
+TurbModel: "IECVKM"
+IECturbc: "15.1"
+WindProfileType: PL
+RefHt: 501
+URef: 49.2
+PLExp: 0.3
+Z0: 0.7
+
+Non-IEC Meteorological Boundary Conditions: 
+Latitude: 30
+UStar: 0.09
+PC_UW: -6.6
+
+Coherent Turbulence Scaling Parameters
+update path to your Test/EventData
+CTEventFile: "LES"
+CTStartTime: 1
