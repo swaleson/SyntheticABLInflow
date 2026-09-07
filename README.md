@@ -13,10 +13,10 @@ If you use material from this repository, please cite the publication above.
 1. References to the synthetic inflow generation method sources (external)
 2. OpenFOAM base cases (suburban)
 3. input and reference data used in the comparison for the open, suburban, and urban case
-4. Matlab script to generate inflow data from tensors
+4. Matlab script to generate inflow data from tensors *(in preparation for publication, will be provided soon)*
 
 # 01. Synthetic inflow generation method sources
-The third-party synthetic inflow generation methods are only provided as links. The external material remains subject to the terms and conditions of the respective providers.
+The third-party synthetic inflow generation methods are only provided as links. The provided input files in the OpenFOAM cases are part of the following methods. The external material remains subject to the terms and conditions of the respective providers.  
 
 **DFSR** 
 
@@ -32,19 +32,19 @@ Provided with adjusted eddy life-time and multiple fields of which only one is u
 
 **TurbSim** 
 
-Provided through https://www.nlr.gov/wind/nwtc/turbsim. Beware that the NREL was renamed to NLR. 
+Provided through https://www.nlr.gov/wind/nwtc/turbsim. Beware of their data disclaimer (https://www.nlr.gov/disclaimer) and that the NREL was renamed to NLR. 
 
 **DFSEM**
 
 *turbulentDFSEMInlet* for version 2012. e.g. https://doc.openfoam.com/2306/tools/processing/boundary-conditions/rtm/derived/inlet/turbulentDFSEMInlet/
 
 # 02. OpenFOAM base case (suburban)
-The OpenFOAM cases are provided for the suburban case and the five synthetic inflow generation methods in the respective directory. 
+The OpenFOAM cases are provided for the suburban case and the five synthetic inflow generation methods in the respective directory. The case is based on the example file of the DFSR structure (see Melaku & Bitsuamlak 2021)
 
 # 03. Input open / suburban / urban
-The input data from the comparison targeting the ESDU open, suburban, and urban case are included in the directory. 
+The input data from the comparison targeting the ESDU open, suburban, and urban case are included in the directory. The files for the input data originate from the above sources and remain subject to their copyright. 
 
 # 04. Matlab Tensor -> Inlet BC
-The matlab script to deconstruct the tensors from Mann and TurbSim as inflow boundary condition per time step are included in a separate directory. 
+The Matlab script to deconstruct the tensors from Mann and TurbSim as inflow boundary condition per time step are included in a separate directory. *(in preparation for publication, will be provided soon)*
 
 
