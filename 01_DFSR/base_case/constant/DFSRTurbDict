@@ -1,0 +1,85 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      DFSRTurbDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+// DFSR version:
+// A.F. Melaku and G.T. Bitsuamlak, DFSR v1.0 (2021),
+// https://zenodo.org/badge/latestdoi/300517389
+// GPL-2.0-or-later.
+
+// The DFSR source code was used without modification.
+
+// This file was adapted from the original example file.
+// Changes made for this study include:
+// - endTime 60, timeStep 0.0008, fmax 625, nFreq 4096;
+// - Coherency decay coefficients were adjusted to Solari and Piccardo (2001)
+// - correctDivergene is switched on;
+
+
+#include "../setUp"
+
+//Name of the inflow patch
+patchName               "inlet";
+
+//Start time of the simulation
+startTime 		0.0;
+
+//End time of the simulation
+endTime                 60;		
+
+//Time step for the inflow generation Should be 1/(2*fmax) 
+//to take advantage of the FFT algorithm.
+timeStep		0.0008;
+
+//Upper cut off frequency 
+fMax                    625;
+
+//The number of frequency steps 
+nFreq			4096;
+
+
+//Number of spectral interpolation frequencies 
+nInterp			50;
+
+//Constant mean velocity for coherency function  
+cohUav                  $Uref;
+
+//Seed of the random number generator used to sample random phase angles 
+seed                    1234;          
+
+//Coherency decay coefficients 
+C                       (//x	y    z	
+                          3.00 10.0 10.0 //u
+                          3.00 6.5 6.5 //v
+                          0.5 6.5 3 //w
+						  //3.00 10.0 10.0 //u
+                          //3.00 5.00 5.50 //v
+                          //3.00 5.50 5.00 //w
+                        );  
+
+//Factors to scale turbulence intensities and length scale profiles
+//in each direction helps to account for decay of turbulence  
+scaleI                  (1.0 1.0 1.0);
+scaleL                  (1.0 1.0 1.0);
+
+//Apply div-free corrections or not 
+correctDivergence	    on;
+
+//Write the time-series for sampled points
+writeSamples           	on;
+
+//Write the final inflow data
+writeInflow            	on;
+// ************************************************************************* //
