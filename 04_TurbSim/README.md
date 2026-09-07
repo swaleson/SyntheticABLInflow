@@ -1,4 +1,4 @@
-#TurbSim Manual
+# TurbSim Manual
 
 Preparation: Download and install the TurbSim executable (https://www.nlr.gov/wind/nwtc/turbsim) and adjust the TurbSim.inp file according to the adjustments for the open, suburban, and urban case as provided in the text files.. Beware of the data disclaimer (https://www.nlr.gov/disclaimer) and that the NREL was changed into NLR recently. The structure of the case is based on the DFSR example case provided by Melaku & Bitsuamlak (2021)
 
