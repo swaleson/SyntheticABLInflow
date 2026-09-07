@@ -1,9 +1,0 @@
-# DFSR Manual
-
-After the installation of DFSR, die **OpenFOAM v8** case is decomposed. DFSRTurb is run to generate the inflow data for each time step. Finally, the simulation can be started. The structure of the case is based on the DFSR example case provided by Melaku & Bitsuamlak (2021).
-
-1. decomposePar
-2. mpirun -np 8 DFSRTurb -parallel
-3. mpirun -np 8 pimpleFoam -parallel
-
-The open, suburban, and urban case can be implemented by adjusting the *profile*-file in constant>boundaryData>windProfile, by taking the respective file from the directory. The original files are from *Melaku, A.F. and Bitsuamlak, G.T., 2021. A divergence-free inflow turbulence generator using spectral representation method for large-eddy simulation of ABL flows. Journal of Wind Engineering and Industrial Aerodynamics, 212, p.104580* and include the adapted values for this comparison. 
